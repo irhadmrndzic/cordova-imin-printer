@@ -1,0 +1,53 @@
+{
+  "_from": "cordova-imin-inner-printer",
+  "_id": "cordova-imin-inner-printer@5.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-mA2CikdSBdet4rrhx0QKJudAVyx/BPU72In0pgvsSaYsuNDzlQ96j7uw7Zoteky28Apx8OUh7yGS4TcP9/drVg==",
+  "_location": "/cordova-imin-inner-printer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-imin-inner-printer",
+    "name": "cordova-imin-inner-printer",
+    "escapedName": "cordova-imin-inner-printer",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-imin-inner-printer/-/cordova-imin-inner-printer-5.0.0.tgz",
+  "_shasum": "494310ad2a331af3fda1070cd4b5011060efaa58",
+  "_spec": "cordova-imin-inner-printer",
+  "_where": "C:\\GIT\\ionic",
+  "author": "",
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-imin-inner-printer",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "A starting point for a Cordova Plugin",
+  "homepage": "",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "cordova-imin-inner-printer",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "5.0.0"
+}

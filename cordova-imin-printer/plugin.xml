@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"  xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-imin-inner-printer"
+    version="5.0.0">
+    <name>Cordova Imin Inner Printer</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="iminPrinter" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="IminPrinter">
+          <param name="android-package" value="com.imin.IminPrinter" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+      <config-file target="AndroidManifest.xml" parent="/manifest/application">
+
+        <activity android:label="Print" android:name="com.imin.Print">
+        </activity>
+
+           </config-file>
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+        <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+        <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.CAMERA" />
+
+     </config-file>
+
+
+        <source-file src="src/android/com/imin/IminPrinter.java" target-dir="src/com/imin/" />
+          <source-file src="src/android/com/imin/BluetoothUtil.java" target-dir="src/com/imin/" />
+
+
+        <source-file src="src/android/libs/iminPrinterSDK.jar" target-dir="libs" />
+
+
+        <source-file src="src/android/jniLibs/arm64-v8a/libIAL.so" target-dir="jniLibs/arm64-v8a" />
+        <source-file src="src/android/jniLibs/arm64-v8a/libSDL.so" target-dir="jniLibs/arm64-v8a" />
+        <source-file src="src/android/jniLibs/arm64-v8a/libserial_port.so" target-dir="jniLibs/arm64-v8a" />
+
+
+        <source-file src="src/android/jniLibs/armeabi/libIAL.so" target-dir="jniLibs/armeabi" />
+        <source-file src="src/android/jniLibs/armeabi/libSDL.so" target-dir="jniLibs/armeabi" />
+
+        <source-file src="src/android/jniLibs/armeabi-v7a/libserial_port.so" target-dir="jniLibs/armeabi-v7a" />
+
+        <source-file src="src/android/jniLibs/x86/libserial_port.so" target-dir="jniLibs/x86" />
+
+
+  <source-file src="src/android/com/imin/Print.java" target-dir="src/com/imin/" />
+
+
+
+   <!-- This file is removed because  conflicting with nexgo cordova plugin . If app creating only for imin add this also -->
+
+
+  <framework src="src/android/imin.gradle" custom="true" type="gradleReference" />
+
+    </platform>
+
+</plugin>
