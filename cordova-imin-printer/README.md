@@ -1,0 +1,1 @@
+Cordova Plugin For IMIN Printer Devices
